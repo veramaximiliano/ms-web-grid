@@ -3,7 +3,7 @@ title: MS.COM Grid Sample
 author: Vera Maximiliano J.
 description: MuleSoft Web Grid
 keywords: MuleSoft Web Grid
-baseurl: 
+baseurl: /ms-web-grid
 exclude: ['README.md']
 sass:
     sass_dir: _sass
