@@ -1,0 +1,100 @@
+//
+//  Name Conventions
+//
+//  col-lg-X : large (desktop)
+//  col-md-X : medium (tablet)
+//  col-sm-X : small (mobile)
+//  col-xs-X : extra small (small mobile)
+//
+//  Example
+//  .col-lg-3 .col-md-6 .col-sm-12 .col-xs-12
+//
+//   container  (max-width = 100%)
+//        row  (max-width = large-breakpoint)
+//           columns
+//
+
+/* General Grid Settings */
+$columns: 12
+$large-breakpoint: 1160px
+$large-gutter: 20px
+$large-margin: 20px
+
+$medium-breakpoint: 992px
+$medium-gutter: 18px
+$medium-margin: 19px
+
+$small-breakpoint: 768px
+$small-gutter: 20px
+$small-margin: 22px
+
+$x-small-breakpoint: 480px
+$x-small-gutter: 16px
+$x-small-margin: 20px
+
+/* Columns Generator Function */
+@mixin generate-columns($dev)
+  @for $i from 1 through $columns
+    .row .row-inside .col-#{$dev}-#{$i}
+      width: ($i * 100% / $columns)
+*
+  box-sizing: border-box
+
+html, body
+  padding: 0
+  margin: 0
+
+
+.row
+  width: 100%
+  margin: 0
+  padding: 0
+
+
+.row .row-inside
+  padding: 0 $large-margin/2
+  margin: 0 auto
+  max-width: $large-breakpoint
+  font-size: 0
+
+
+.row .row-inside [class^='col-'], .row .row-inside [class*=' col-']
+  display: inline-block
+  padding: 0 $large-gutter/2
+  vertical-align: top
+  font-size: 16px
+
+/* Large/Desktop columns settings */
+@include generate-columns(lg)
+
+/* Medium/Tablet columns settings */
+@media screen and (max-width: $medium-breakpoint)
+  .row .row-inside
+    padding: 0 $medium-margin/2
+
+  .row .row-inside div[class^='col-'], .row .row-inside div[class*=' col-']
+    padding: 0 $medium-gutter/2
+
+  @include generate-columns(md)
+
+
+/* Small/Mobile columns settings */
+@media screen and (max-width: $small-breakpoint)
+  .row .row-inside
+    padding: 0 $small-margin/2
+
+  .row .row-inside div[class^='col-'], .row .row-inside div[class*=' col-']
+    padding: 0 $small-gutter/2
+
+  @include generate-columns(sm)
+
+
+/* Extra-Small/Mobile columns settings */
+@media screen and (max-width: $x-small-breakpoint)
+  .row .row-inside
+    padding: 0 $x-small-margin/2
+
+  .row .row-inside div[class^='col-'], .row .row-inside div[class*=' col-']
+    padding: 0 $x-small-gutter/2
+
+  @include generate-columns(xs)

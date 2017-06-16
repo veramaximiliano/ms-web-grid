@@ -1,0 +1,10 @@
+markdown: kramdown
+title: MS.COM Grid Sample
+author: Vera Maximiliano J.
+description: MuleSoft Web Grid
+keywords: MuleSoft Web Grid
+baseurl: /grid
+exclude: ['README.md']
+sass:
+    sass_dir: _sass
+    style: compressed

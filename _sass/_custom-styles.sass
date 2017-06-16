@@ -1,0 +1,74 @@
+.intro-row .row-inside
+  padding-bottom: 0
+
+.features-row .row-inside
+  padding-top: 30px
+  .feature ul
+    list-style: none
+    padding: 0
+    color: $blue
+    li
+      margin-top: 10px
+  .feature-breakpoints ul
+    color: $dark-grey
+
+
+.overlay-row
+  position: absolute
+  background: transparent
+  top: 0
+  .row-inside
+    border-left: 1px solid rgba(0,0,0,0.05)
+    border-right: 1px solid rgba(0,0,0,0.1)
+    background: rgba(0,0,0,0.01)
+    padding-top: 0
+    padding-bottom: 0
+    .overlay-block
+      border: 1px solid rgba(0,0,0,0.05)
+      background: rgba(0,0,0,0.02)
+      height: 1600px
+
+.grid-blocks .row-inside
+  padding-top: 0
+  padding-bottom: 0
+  .grid-block
+    height: 200px
+    color: white
+    background: rgba(0,0,0,0.5)
+    margin-top: 20px
+    text-align: center
+    padding-top: 85px
+    font-family: 'OpenSansLight', sans-serif
+    span
+      opacity: 0.4
+      margin: 0 10px
+      display: inline-block
+      vertical-align: middle
+      font-size: 16px
+    span.lg
+      opacity: 1
+      font-size: 22px
+  &.grid-blocks-even .grid-block
+    background: rgba(0,161,223,1)
+
+@media screen and (max-width: $medium-breakpoint)
+  .overlay-row .row-inside .overlay-block
+    height: 2500px
+  .grid-blocks .row-inside .grid-block span
+    &.lg
+      opacity: 0.4
+      font-size: 16px
+    &.md
+      opacity: 1
+      font-size: 22px
+
+@media screen and (max-width: $small-breakpoint)
+  .features-row .feature h3
+    font-size: 16px
+  .grid-blocks .row-inside .grid-block span
+    &.lg, &.md
+      opacity: 0.4
+      font-size: 16px
+    &.sm
+      opacity: 1
+      font-size: 22px

@@ -1,0 +1,163 @@
+// Colors
+
+$blue: #00A0DF
+$blue-hovered: #006993
+$light: #ffffff
+$light-grey: #f2f2f2
+$dark-grey: #323031
+
+// Fonts
+
+@font-face
+  font-family: 'DINProLight'
+  src: url("fonts/din/DINPro-Light.woff")
+  font-weight: normal
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+
+@font-face
+  font-family: 'DINProLight2'
+  src: url("fonts/din/DINPro-Light2.woff2")
+  font-weight: normal
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+
+@font-face
+  font-family: 'DINPro'
+  src: url("fonts/din/DINPro.woff")
+  font-weight: normal
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+
+@font-face
+  font-family: 'DINProBold'
+  src: url("fonts/din/DINProBold.woff")
+  font-weight: normal
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+
+
+@font-face
+  font-family: 'openSans'
+  src: url("fonts/opensans/opensans-regular-webfont.woff")
+  font-weight: normal
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+
+@font-face
+  font-family: 'openSansLight'
+  src: url("fonts/opensans/opensans-light-webfont.woff")
+  font-weight: normal
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+
+
+@font-face
+  font-family: 'openSansBold'
+  src: url("fonts/opensans/opensans-bold-webfont.woff")
+  font-weight: normal
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+
+
+// General
+
+html, body
+  font-family: 'OpenSans', sans-serif
+  a
+    display: inline-block
+    text-decoration: none
+    color: $blue
+    font-size: 15px
+    line-height: 26px
+    &:hover
+      color: $blue-hovered
+
+// Sections
+
+.row .row-inside
+  padding-top: 60px
+  padding-bottom: 60px
+
+.centered-row
+  text-align: center
+
+.white-row
+  background: $light
+  color: $dark-grey
+
+.grey-row
+  background: $light-grey
+  color: $dark-grey
+
+.dark-grey-row
+  background: $dark-grey
+  color: $light
+
+.blue-row
+  background: $blue
+  color: $light
+  a
+    color: white
+  .button
+    color: $light
+    border-color: $light
+    &:hover
+      color: $blue
+      background: $light
+      border-color: $light
+
+// Headings, Paragraphs & Lists
+
+h1
+  font-family: 'DinProLight', sans-serif
+  font-size: 32px
+  line-height: 39px
+
+h2
+  font-family: 'DinProLight', sans-serif
+  font-size: 26px
+  line-height: 28px
+
+h3
+  font-family: 'DinProLight', sans-serif
+  font-size: 22px
+  line-height: 24px
+
+h4
+  font-family: 'OpenSansLight', sans-serif
+  font-size: 18px
+  line-height: 22px
+
+p
+  font-family: 'OpenSans', sans-serif
+  font-size: 16px
+  line-height: 26px
+ul
+  margin: 0
+  padding: 0 0 0 20px
+  li
+    font-family: 'OpenSans', sans-serif
+    font-size: 16px
+
+// Buttons
+
+.button
+  display: inline-block
+  height: 50px
+  width: auto
+  min-width: 270px
+  font-family: 'OpenSans', sans-serif
+  font-size: 15px
+  text-align: center
+  padding: 8px 25px
+  line-height: 2
+  color: $blue
+  border: 1px solid $blue
+  background: transparent
+  -webkit-transition: .3s all ease
+  transition: .3s all ease
+  &:hover
+    background: $blue
+    color: $light
+    border-color: $blue
